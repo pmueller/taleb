@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "taleb"
+require 'dotenv'
+
+Dotenv.load
+
+Taleb::Bot.run
