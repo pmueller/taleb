@@ -6,4 +6,6 @@ require 'dotenv'
 
 Dotenv.load
 
+SlackRubyBot::Client.logger.level = Logger::INFO
+
 Taleb::Bot.run
