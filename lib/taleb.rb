@@ -13,7 +13,7 @@ module Taleb
       store = Store.new(redis)
       parsed_message = KVParser.parse match[0]
       store.store! parsed_message
-      if rand < 0.033 || match[0] == "taleb justdoit"
+      if rand < 0.01 || match[0] == "taleb justdoit"
         client.typing channel: data.channel
         mouth = Markov::Mouth.new(Markov::Brain.new(redis))
         client.say(channel: data.channel, text: mouth.speak)
